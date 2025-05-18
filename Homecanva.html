@@ -2,88 +2,154 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Follow & Join App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Graphic Design with Canva</title>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #7047EB;
+            --primary-dark: #5836C9;
+            --accent-color: #FF6B6B;
+            --light-bg: #F9F7FF;
+            --dark-text: #333333;
+            --light-text: #FFFFFF;
+            --gray-text: #666666;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #333;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
             margin: 0;
             padding: 0;
-          
+            line-height: 1.6;
         }
 
         .container {
             width: 90%;
-            max-width: 600px;
-            max-height:100%;
-            margin: 20px auto;
+            max-width: 650px;
+            margin: 30px auto;
             text-align: center;
-            padding: 20px;
+            padding: 30px 25px;
             background: #fff;
-            <!-- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); -->
-            border-radius: 0px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
         }
 
         .online-image {
             max-width: 100%;
-           
-            height: 20ppx;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(112, 71, 235, 0.15);
         }
 
         h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
         }
 
         p {
-            margin: 10px 0;
+            margin: 15px 0;
+            color: var(--gray-text);
+            font-size: 1.05em;
+        }
+        
+        strong {
+            color: var(--accent-color);
         }
 
         .btn {
             display: inline-flex;
-            align-items: left;
-            justify-content: left;
+            align-items: center;
+            justify-content: flex-start;
             width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            font-size: 1.2em;
-            color: #fff;
+            padding: 16px 20px;
+            margin: 12px 0;
+            font-size: 1.1em;
+            color: var(--light-text);
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
             text-decoration: none;
-            transition: background-color 0.3s ease;
-            gap: 10px;
+            transition: all 0.3s ease;
+            gap: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-weight: 500;
         }
 
         .btn:hover {
-            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
         }
 
-        .youtube-btn {
-            background: #554ac2;
+        .youtube-btn, .telegram-btn, .facebook-btn, .whatsapp-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
         }
-
-        .telegram-btn {
-            background: #554ac2;
-        }
-
-        .facebook-btn {
-            background: #554ac2;
-        }
-
-        .whatsapp-btn {
-            background: #554ac2;
+        
+        .lesson-number {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+            font-size: 0.9em;
         }
 
         .whatsapp-btn:hover {
-            background: #1EBE56;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+        
+        .section-title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            position: relative;
+            font-size: 1.6em;
+            color: var(--primary-dark);
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .fa-youtube {
+            color: var(--light-text);
+            font-size: 1.3em;
+        }
+        
+        .header-tag {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: var(--gray-text);
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -91,52 +157,46 @@
     <div class="container">
         
         <!-- Online Image Section -->
-        <img src="https://ikskiils.com.ng/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-15-at-1.26.59-PM.jpeg" alt="Online Content" class="online-image">
+        <img src="https://ikskiils.com.ng/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-15-at-1.26.59-PM.jpeg" alt="Master Graphic Design with Canva" class="online-image">
         
+        <span class="header-tag">SMARTPHONE COURSE</span>
+        <h1>Master Graphic Design with Canva</h1>
+        <p><strong>Turn your creativity into cash!</strong> Learn how to design stunning graphics using Canva on your smartphone and monetize your skills. This step-by-step course will take you from beginner to pro, covering everything from social media graphics to selling digital designs.</p>
         
-        <p><h1>Master Graphic Design with Canva on Your Smartphone!</h1></p>
-        <p><h4>Are you ready to turn your creativity into cash? Learn how to design stunning graphics using Canva on your smartphone and monetize your skills. This step-by-step course will take you from a beginner to a pro, covering everything from social media graphics to selling digital designs. No laptop needed—just your phone!</h4></p>
-        
-  
+        <h3 class="section-title">Course Lessons</h3>
 
         <button class="btn youtube-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva1.html')">
-            <i class="fab fa-youtube"></i>How To Set Up Account On Canva
+            <span class="lesson-number">1</span><i class="fab fa-youtube"></i>How To Set Up Account On Canva
         </button>
         <button class="btn youtube-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva2.html')">
-            <i class="fab fa-youtube"></i>Difference Between Free vs Pro Version
+            <span class="lesson-number">2</span><i class="fab fa-youtube"></i>Difference Between Free vs Pro Version
         </button>
-        <button class="btn telegram-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva3.html">
-            <i class="fab fa-youtube"></i>Introduction To Canva Interface
+        <button class="btn youtube-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva3.html')">
+            <span class="lesson-number">3</span><i class="fab fa-youtube"></i>Introduction To Canva Interface
         </button>
-        <button class="btn telegram-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva4.html)">
-            <i class="fab fa-youtube"></i>Positioning and Spacing Elements in Canva
+        <button class="btn youtube-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva4.html')">
+            <span class="lesson-number">4</span><i class="fab fa-youtube"></i>Positioning and Spacing Elements
         </button>
-        <button class="btn facebook-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva5.html')">
-            <i class="fab fa-youtube"></i>How to Working With Rulers and Grids in Canva
+        <button class="btn youtube-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva5.html')">
+            <span class="lesson-number">5</span><i class="fab fa-youtube"></i>Working With Rulers and Grids
         </button>
-        <button class="btn whatsapp-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva6.html')">
-            <i class="fab fa-youtube"></i>How Working With Text Alignments Efficiently
+        <button class="btn youtube-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva6.html')">
+            <span class="lesson-number">6</span><i class="fab fa-youtube"></i>Working With Text Alignments
         </button>
-        <button class="btn whatsapp-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva7.html')">
-            <i class="fab fa-youtube"></i>How Selection and Grouping Benefits
+        <button class="btn youtube-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva7.html')">
+            <span class="lesson-number">7</span><i class="fab fa-youtube"></i>Selection and Grouping Benefits
         </button>
-        <button class="btn whatsapp-btn" onclick="openLink('https://daviddevworld.github.io/hhvsafsusjsaxjdawgwhatsappmarketing/WV8.html')">
-            <i class="fab fa-youtube"></i>How to Send Text and Shapes Object Stacking.
+        <button class="btn youtube-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva8.html')">
+            <span class="lesson-number">8</span><i class="fab fa-youtube"></i>Text and Shapes Object Stacking
         </button>
-        <button class="btn whatsapp-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva8.html')">
-            <i class="fab fa-youtube"></i>For Laptop - Conversion Ads To WhatsApp
+        <button class="btn youtube-btn" onclick="openLink('https://daviddevworld.github.io/NJLDGAOGAUIGJIUHANUKNGJAAKJNXAKDNJBASICANVAA/canva9.html')">
+            <span class="lesson-number">9</span><i class="fab fa-youtube"></i>Conversion Ads To WhatsApp
         </button>
-        <!--<button class="btn whatsapp-btn" onclick="openLink('https://daviddevworld.github.io/hhvsafsusjsaxjdawgwhatsappmarketing/WV10.html')">-->
-        <!--    <i class="fab fa-youtube"></i>Canva On Phone-->
-        <!--</button>-->
-        <!--<button class="btn whatsapp-btn" onclick="openLink('https://daviddevworld.github.io/hhvsafsusjsaxjdawgwhatsappmarketing/WV11.html')">-->
-        <!--    <i class="fab fa-youtube"></i>Marketing Video-->
-        <!--</button>-->
-        <!--<button class="btn whatsapp-btn" onclick="openLink('https://daviddevworld.github.io/hhvsafsusjsaxjdawgwhatsappmarketing/WV12.html')">-->
-        <!--    <i class="fab fa-youtube"></i>Marketing Video 2-->
-        <!--</button>-->
 
-        <h2>Thank You</h2>
+        <div class="footer">
+            <h3>Thank You for Enrolling!</h3>
+            <p>Start your design journey today and unlock your creative potential</p>
+        </div>
     </div>
 
     <script>
@@ -145,7 +205,6 @@
         }
     </script>
     
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/9c45d17aa762fd0224f62c43b28bbfa5/invoke.js"></script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/9c45d17aa762fd0224f62c43b28bbfa5/invoke.js"></script>
 </body>
 </html>
